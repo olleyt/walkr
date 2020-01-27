@@ -1,0 +1,79 @@
+Walkr allows to use a markup language that is modified HTML.
+W3 School is a great start point to learn basic HTML. 
+
+Here is link to the school where you can also experiment with HTML for text formatting:
+https://www.w3schools.com/html/html_formatting.asp
+
+Be aware that not everything will work in walkr, and some known limitations will be described below.
+
+Walkr HTML - working tags
+walkr doesn't use <font> HTML tag, so we need to change font color and size explicitly. 
+All tags require closing paired tags. Again you can see the output in HTML when experimenting inW3school.  
+
+Some text effects that works:
+- <i> - Italic text. Example <i> test </i>
+- <b> - Bold text. Example <b> test </b>
+
+Change of color
+Walkr will accept color standard HTML names as well as hex codes.
+Again, W3school is a great source to learn about coloring in HTML 
+
+However, <font> or <h> or <p> tags are not recognised by walkr, thus you need to use walkr specific <color> tag with closing paired </color>.
+
+example with named color: 
+<color=red> Hello </color>
+
+example with color hex code:
+<color=#c6a2d5>Hello</color>
+
+color picker:
+https://www.w3schools.com/colors/colors_picker.asp
+
+color fading
+great tool for generating html code for gradient & color fading effect:
+http://patorjk.com/text-color-fader/
+There is an example below for 1 liner banner. I also wrapped it in itallic <i> tag and added emoji at the end. 
+
+Example: Impressive 1-liner with fading colors
+
+<div>
+<span style="color:#c6a2d5;">H</span><span style="color:#b3acd4;">e</span><span style="color:#a0b7d3;">l</span><span style="color:#8cc1d2;">l</span><span style="color:#79cbd1;">o</span><span style="color:#7dccc2;"> </span><span style="color:#81ceb4;">f</span><span style="color:#84cfa5;">r</span><span style="color:#88d096;">o</span><span style="color:#9dc397;">m</span><span style="color:#b3b598;"> </span><span style="color:#c8a899;">O</span><span style="color:#dd9a9a;">l</span><span style="color:#dd8d9b;">l</span><span style="color:#dd819d;">e</span><span style="color:#dc749e;">y</span><span style="color:#dc679f;"> </span></div>
+
+1. Delete <div> and closing </div> tags
+2. for each <span style="color:#..> tag do following:
+	1. remove span style=" and make color:#c6a2d5;" as color=#c6a2d5. No quotes or semicolon needed
+	2. change </span> closing tag to </color> closing tag
+3. end result:
+
+<I><color=#c6a2d5>H</color><color=#b3acd4>e</color><color=#a0b7d3>l</color><color=#8cc1d2>l</color><color=#79cbd1>o</color><color=#7dccc2> </color><color=#81ceb4>f</color><color=#84cfa5>r</color><color=#88d096>o</color><color=#9dc397>m</color><color=#b3b598> </color><color=#c8a899>O</color><color=#dd9a9a>l</color><color=#dd8d9b>l</color><color=#dd819d>e</color><color=#dc749e>y</color><color=#dc679f> </color></I>❤️
+
+Change of font size
+<font> or <h> or <p> tags are not recognised by walkr, thus you need to use walkr specific <size> tag with closing paired </size>.
+You can also enlarge emoji as they are treated as text.
+
+Example: <size=55> 🐬🌊🏄🏻‍♀️⚡️✨🇦🇺</size>
+
+Special characters and symbols:
+There are plenty of special characters and symbols that you can add to your banners. I could just copy them directly without using their codes:
+- symbols https://www.w3schools.com/charsets/ref_utf_symbols.asp
+- dingbats : https://www.w3schools.com/charsets/ref_utf_dingbats.asp
+I found not of them visible in epic chats, so you need to test how they will appear in lab chat when your banner is ready.
+
+Example: My first 3 lines banner with special characters
+
+Walkr is not very good with wrapping words around and aligning lines with space, so I had to add black dots to align my banner.
+Here is result of my experiment:
+
+<color=#38d1b0> <size=25> ╭ ≈ ≈ ≈ ≈ ≈ ≈ ≈ ≈ ≈ ≈ ≈ ≈ ≈ ≈ ≈ ≈ ≈ ≈ ╮                     
+    <color=black>.  </color> Energy from Olley<size=55> 🐬🌊🏄🏻‍♀️⚡️✨🇦🇺</size>                  
+</size> <color=black>.</color><size=25> ╰ ≈ ≈ ≈ ≈ ≈ ≈ ≈ ≈ ≈ ≈ ≈ ≈ ≈ ≈ ≈ ≈ ≈ ≈ ╯</size></color> 
+
+Walkr HTML limitations
+There are some known walkr limitations (iOS walkr versions):
+- break lines are not interpreted, so if you try to use <br/> to make a new line in your banner, it won't work and <br/> will appear in the end result of your banner
+- as mentioned above, <font>, <p>, <h> tags are not recognised in walkr
+- css styling is also not working in my experience
+
+
+
+
